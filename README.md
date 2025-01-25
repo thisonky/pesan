@@ -1,3 +1,3 @@
 # pesan
 
-thisonky.github.io/pesan
+https://thisonky.github.io/pesan
