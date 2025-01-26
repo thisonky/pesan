@@ -83,5 +83,24 @@
 <script>
   // Menampilkan tombol "Balas" setelah semua teks selesai
   window.onload = function() {
+    // Menunggu teks blockquote selesai sebelum menampilkan tombol
     setTimeout(function() {
-   
+      document.getElementById("Tombol").style.display = "block"; // Menampilkan tombol "Balas"
+    }, 10000); // Mengatur waktu sesuai dengan kebutuhan Anda
+  }
+
+  // Fungsi untuk menampilkan input dan tombol kirim pesan
+  document.getElementById("By").onclick = function() {
+    document.getElementById("inputSection").style.display = "block"; // Menampilkan input dan tombol kirim
+  };
+
+  // Fungsi untuk mengirim pesan ke WhatsApp
+  document.getElementById("sendToWA").onclick = function() {
+    var message = document.getElementById("userMessage").value; // Mengambil pesan dari input
+    var whatsappURL = "https://wa.me/087763082104?text=" + encodeURIComponent(message); // Membuat URL WhatsApp
+    window.open(whatsappURL, "_blank"); // Membuka WhatsApp dengan pesan yang diketik
+  };
+</script>
+
+</body>
+</html>
